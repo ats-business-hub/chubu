@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatKeep Privacy Policy</title>
+  <meta name="description" content="Privacy policy for the ChatKeep browser extension. Your conversations stay on your device.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://chubutripnotes.com/chatkeep/privacy">
+  <style>
+    :root { color-scheme: light; --fg: #1a1a1a; --muted: #555; --line: #e5e5e5; --bg: #fff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", sans-serif; color: var(--fg); background: var(--bg); }
+    main { max-width: 40rem; margin: 0 auto; padding: 2.25rem 1.25rem 3.5rem; }
+    h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+    .meta { color: var(--muted); font-size: .92rem; margin: 0 0 1.5rem; }
+    .lead { font-size: 1.05rem; margin: 0 0 1.5rem; }
+    h2 { font-size: 1.15rem; margin: 1.85rem 0 .55rem; }
+    p, li { margin: 0 0 .7rem; }
+    ul { padding-left: 1.2rem; margin: 0 0 .7rem; }
+    a { color: #0b57d0; }
+    table { border-collapse: collapse; width: 100%; margin: .4rem 0 1rem; font-size: .95rem; }
+    th, td { border: 1px solid var(--line); padding: .5rem .65rem; text-align: left; vertical-align: top; }
+    th { background: #f7f7f7; font-weight: 600; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .9em; background: #f4f4f4; padding: .05em .35em; border-radius: 3px; }
+    footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>ChatKeep Privacy Policy</h1>
+    <p class="meta">Last updated and effective: 21 November 2026. Applies to ChatKeep 1.0.0 and later.</p>
+    <p class="lead">ChatKeep (“the extension”) is a browser extension that lets you export and back up your own conversations from ChatGPT, Claude, Gemini, Grok and DeepSeek. This policy explains exactly what it does with data. The short version: <strong>your conversations stay on your device. ChatKeep has no servers, no accounts, no analytics and no advertising.</strong></p>
+
+    <h2>Who we are</h2>
+    <p>ChatKeep is published by <strong>Notetaker Notes</strong>. Contact: <a href="mailto:s1xqpwat@mail.grokbot.com">s1xqpwat@mail.grokbot.com</a>.</p>
+    <p>ChatKeep is an independent tool. It is not affiliated with, endorsed by, or sponsored by OpenAI, Anthropic, Google, xAI or DeepSeek. All product names are trademarks of their respective owners.</p>
+
+    <h2>What ChatKeep accesses</h2>
+    <ul>
+      <li><strong>Website content on the supported chat sites</strong> (chatgpt.com, chat.openai.com, claude.ai, gemini.google.com, grok.com, chat.deepseek.com). When you press an export button, ChatKeep reads the conversation currently displayed on that page (your messages and the AI’s replies, and the conversation title and URL) in order to build the export file. If you have ChatKeep Pro with auto-backup turned on, it does the same after a page has been quiet for a few seconds so that the conversation you are viewing can be saved to your local library.</li>
+      <li><strong>ChatKeep does not read</strong> any other website, your browsing history, cookies, passwords, or your account credentials for those sites. It uses no unofficial or internal APIs of those services; it only reads what is rendered on the page you are looking at.</li>
+    </ul>
+
+    <h2>Where data is stored</h2>
+    <ul>
+      <li><strong>Exports</strong> (Markdown, text, JSON, HTML, ZIP, and the PDF print view) are created on your device and saved through your browser’s normal download mechanism, or shown in a local print view.</li>
+      <li><strong>Library / auto-backup (Pro):</strong> saved conversations are stored in your browser profile (IndexedDB, managed by the extension). They are never uploaded. You can delete any item, or remove the extension, to erase them.</li>
+      <li><strong>Settings and license state</strong> are stored in the extension’s local storage (<code>chrome.storage.local</code>).</li>
+    </ul>
+
+    <h2>What is sent over the network</h2>
+    <p>ChatKeep makes <strong>one</strong> kind of network request: <strong>license verification</strong> with Gumroad (api.gumroad.com), only if you enter a Pro license key.</p>
+    <ul>
+      <li>Sent: the license key you entered and ChatKeep’s Gumroad product ID, over HTTPS.</li>
+      <li>Received: whether the key is valid and the state of the purchase (for example refunded, cancelled).</li>
+      <li>The check is repeated about once a day while Pro is active. No conversation content, page content, or browsing information is ever included.</li>
+      <li>Gumroad processes that request under its own <a href="https://gumroad.com/privacy" rel="noopener noreferrer">privacy policy</a>. Purchases and payments happen on gumroad.com, not inside ChatKeep; ChatKeep never sees your payment details.</li>
+    </ul>
+    <p>ChatKeep does <strong>not</strong> transmit conversations, titles, URLs, usage statistics, crash reports, device identifiers or any analytics to the publisher or to any third party.</p>
+
+    <h2>Sharing and sale of data</h2>
+    <p>We do not sell or share user data with anyone. We do not use or transfer user data for purposes unrelated to ChatKeep’s single purpose (exporting and backing up your chats), for advertising, for credit or lending decisions, or to train any model. We have no access to your data.</p>
+
+    <h2>Permissions used</h2>
+    <table>
+      <thead>
+        <tr><th>Permission</th><th>Why</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Host access to the six chat sites</td><td>To read the conversation shown on the page and show the export button.</td></tr>
+        <tr><td><code>storage</code></td><td>To remember settings and your license state.</td></tr>
+        <tr><td><code>unlimitedStorage</code></td><td>So the optional local library is not limited by the default browser quota.</td></tr>
+        <tr><td><code>alarms</code></td><td>To re-check your Pro license about once a day.</td></tr>
+        <tr><td>Host access to <code>api.gumroad.com</code></td><td>To verify a Pro license key.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Security</h2>
+    <p>Network requests use HTTPS. ChatKeep does not load or execute remote code. Exported HTML and the print view escape all conversation text before display.</p>
+
+    <h2>Your choices</h2>
+    <p>You can use the free features without entering any license key. You can turn off the on-page button and auto-backup in Settings, delete saved conversations in the Library, remove your license in Settings, or uninstall the extension at any time (this deletes ChatKeep’s stored data from your browser).</p>
+
+    <h2>Children</h2>
+    <p>ChatKeep is not directed at children under 13 and does not knowingly collect any personal information.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the new version will be posted at the same URL and the date above will be updated. Material changes will also be noted in the extension’s release notes.</p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:s1xqpwat@mail.grokbot.com">s1xqpwat@mail.grokbot.com</a></p>
+
+    <footer>
+      Published by Notetaker Notes. This page is the privacy policy for the ChatKeep browser extension.
+    </footer>
+  </main>
+</body>
+</html>
