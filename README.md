@@ -1,6 +1,6 @@
 # Chubu Trip Notes — link hub
 
-Public page: https://ats-business-hub.github.io/chubu/
+Public page: https://chubutripnotes.com/
 
 English link-in-bio for the Central Japan short-video accounts (TikTok ATMwn, Instagram aatbataat, YouTube Chubu Trip Notes) and Gumroad guides.
 
