@@ -5,3 +5,7 @@ Own-generated visuals and original ambient audio only. Not merged to the public 
 
 Each video is 24 seconds, H.264 + AAC. Captions are the matching `.txt` files.
 These files are here so Metricool can fetch a public raw GitHub URL while this branch is open.
+
+## Batch 2 (24 Nov 2026 evening)
+
+20 more unique typography shorts (26–45) for 28 Nov–1 Dec scheduling. Same format. No site pages changed.
