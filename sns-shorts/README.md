@@ -9,3 +9,7 @@ These files are here so Metricool can fetch a public raw GitHub URL while this b
 ## Batch 2 (24 Nov 2026 evening)
 
 20 more unique typography shorts (26–45) for 28 Nov–1 Dec scheduling. Same format. No site pages changed.
+
+## Batch 3 (25 Nov 2026)
+
+6 typography shorts (46–51) introducing the new free guides: JR Pass vs Chubu passes, Osaka–Takayama, Tokyo–Takayama, Takayama–Kanazawa, Nagoya day trips, and Magome–Tsumago. Same format. No site pages changed. Do not merge until Metricool has ingested the files.
