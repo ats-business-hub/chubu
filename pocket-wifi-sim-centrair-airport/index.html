@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CYP76HH2PG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CYP76HH2PG');
+  document.addEventListener('click', function (event) {
+    var node = event.target;
+    while (node && node.tagName !== 'A') node = node.parentNode;
+    if (!node) return;
+    var rel = (node.getAttribute('rel') || '').toLowerCase().split(/\s+/);
+    if (rel.indexOf('sponsored') === -1) return;
+    var href = node.href || '';
+    var domain = '';
+    try { domain = new URL(href, window.location.href).hostname; } catch (e) {}
+    var from = '';
+    try {
+      var stored = new URLSearchParams(window.location.search).get('from') || sessionStorage.getItem('chubuFrom') || '';
+      from = String(stored).toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 32);
+    } catch (e) {}
+    var parts = window.location.pathname.split('/').filter(Boolean);
+    gtag('event', 'affiliate_click', {
+      link_url: href,
+      link_domain: domain,
+      page_slug: parts.length ? parts[parts.length - 1] : 'home',
+      from: from,
+      transport_type: 'beacon'
+    });
+  });
+</script>
 <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1" data-cmp-ab="2">
   (function () {
       var script = document.createElement("script");
@@ -135,6 +166,8 @@
     table { width: 100%; border-collapse: collapse; font-size: .9rem; margin: 0 0 1rem; background: var(--card); }
     th, td { border: 1px solid var(--line); padding: .45rem .5rem; text-align: left; vertical-align: top; }
     th { font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; }
+    a.cmp { display: inline-block; margin: .2rem .35rem .2rem 0; padding: .28rem .55rem; background: var(--card); color: var(--accent); border: 1px solid var(--accent); border-radius: 6px; text-decoration: none; font-size: .78rem; line-height: 1.3; }
+    a.cmp:hover, a.cmp:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
     .sources, .sources li { font-size: .85rem; color: var(--muted); }
     .sources { list-style: disc; padding-left: 1.2rem; margin: 0 0 1rem; }
     .sources a { color: var(--ink); }
@@ -170,6 +203,11 @@
       <li><strong>Landing at night or at the weekend?</strong> Book a counter that keeps longer hours. NINJA WiFi shares the Global WiFi counter in Access Plaza (6:30 am–10 pm). The SoftBank counter on the Terminal 1 arrivals floor is open 7:30 am–9 pm. Or have the router sent to your hotel.</li>
     </ul>
 
+    <p class="note"><strong>Optional booking (affiliate, #ad).</strong></p>
+    <ul>
+      <li><a class="card" rel="sponsored nofollow noopener" target="_blank" href="https://www.sakuramobile.jp/chubutripnotes-top"><strong>Check Sakura Mobile SIM, eSIM and pocket Wi-Fi</strong><span class="note">Affiliate. For Centrair pickup, choose a weekday arrival between 9:00 and 17:00, or hotel delivery.</span></a></li>
+    </ul>
+
     <h2>The Centrair post office: weekdays only</h2>
     <p>Centrair’s official page says Japan Post’s Tokoname Centrair branch is on the first floor of Terminal 1. Postal service runs on weekdays from 9:00 to 17:00, with no handling on Saturdays, Sundays, or national holidays. Sakura Mobile’s pickup page names the same office as its Centrair pickup point (“Tokoname Post Office Centrair Branch, Welcome Garden 1F”), with the same weekday hours. Japan Wireless also lists “Chubu Centrair: Post Office” as its airport pickup and needs the order one day ahead, excluding Saturdays, Sundays, and holidays.</p>
     <p>So a Friday-evening or Saturday arrival cannot collect a post-office order until Monday morning. For those flights, choose hotel delivery, an eSIM, or a counter with longer hours.</p>
@@ -183,6 +221,16 @@
         <tr><td>NINJA WiFi</td><td>“Global WiFi x NINJA WiFi” counter, T1 2F Access Plaza</td><td>6:30–22:00</td><td>Its next-day-pickup FAQ does not list Centrair, so book further ahead.</td></tr>
         <tr><td>SoftBank Global Rental Counter</td><td>T1 2F Arrivals lobby</td><td>7:30–21:00</td><td>Walk-in rentals and prepaid SIMs. A 24-hour SIM vending machine stands in front of the international arrivals gate.</td></tr>
         <tr><td>eSIM (any seller)</td><td>Nothing to collect</td><td>Any time</td><td>Your phone must be unlocked and eSIM-capable.</td></tr>
+        <tr>
+          <td colspan="4">Compare #ad<br>
+            <a class="cmp" rel="sponsored nofollow noopener" target="_blank" href="https://www.sakuramobile.jp/chubutripnotes-top">Check Sakura Mobile</a>
+            <a class="cmp" rel="sponsored nofollow noopener" target="_blank" href="https://www.japan-wireless.com/?via=atsushi">Check Japan Wireless</a>
+            <a class="cmp" rel="sponsored nofollow noopener" target="_blank" href="https://affiliate.klook.com/redirect?aid=144364&amp;aff_adid=1584670&amp;k_site=https%3A%2F%2Fwww.klook.com%2Fen-US%2Factivity%2F16399-unlimited-4g-lte-wifi-japan-airport-pickup-ninja-wifi%2F">Compare NINJA WiFi</a>
+            <a class="cmp" rel="sponsored nofollow noopener" target="_blank" href="https://saily.tpx.lv/sSYEtqIe">Compare Saily</a>
+            <a class="cmp" rel="sponsored nofollow noopener" target="_blank" href="https://airalo.tpx.lv/gJ3DoVJr">Compare Airalo</a>
+            <a class="cmp" rel="sponsored nofollow noopener" target="_blank" href="https://www.japan-wireless.com/esim?via=atsushi">Compare Japan Wireless eSIM</a>
+          </td>
+        </tr>
       </tbody>
     </table>
     <p class="note">Hours are from Centrair’s official Wi-Fi rental and post office pages and from each company’s own pickup page. Counters can change their hours, so recheck before you fly.</p>
@@ -280,5 +328,6 @@
     })();
   </script>
 
+  <script src="/assets/chubu.js"></script>
 </body>
 </html>

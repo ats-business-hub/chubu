@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CYP76HH2PG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CYP76HH2PG');
+  document.addEventListener('click', function (event) {
+    var node = event.target;
+    while (node && node.tagName !== 'A') node = node.parentNode;
+    if (!node) return;
+    var rel = (node.getAttribute('rel') || '').toLowerCase().split(/\s+/);
+    if (rel.indexOf('sponsored') === -1) return;
+    var href = node.href || '';
+    var domain = '';
+    try { domain = new URL(href, window.location.href).hostname; } catch (e) {}
+    var from = '';
+    try {
+      var stored = new URLSearchParams(window.location.search).get('from') || sessionStorage.getItem('chubuFrom') || '';
+      from = String(stored).toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 32);
+    } catch (e) {}
+    var parts = window.location.pathname.split('/').filter(Boolean);
+    gtag('event', 'affiliate_click', {
+      link_url: href,
+      link_domain: domain,
+      page_slug: parts.length ? parts[parts.length - 1] : 'home',
+      from: from,
+      transport_type: 'beacon'
+    });
+  });
+</script>
 <script nowprocket data-noptimize="1" data-cfasync="false" data-wpfc-render="false" seraph-accel-crit="1" data-no-defer="1" data-cmp-ab="2">
   (function () {
       var script = document.createElement("script");
